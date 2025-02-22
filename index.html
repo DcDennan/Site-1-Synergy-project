@@ -4,311 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traviora</title>
-    <link rel="stylesheet" href="D:\Sitemain\CSS\Style.css">
+    <link rel="stylesheet" href="CSS\Style.css">
 </head>
-    
-    <style>
-        .header {
-            background-color: black;
-        }
-        .tage {
-            color: white;
-        }
-        
-    
-.header {
-    height: 50px;
-    background-color: black; /* Цвет фона заголовка */
-    padding: 15px; /* Отступы внутри заголовка */
-    color: #757575;
-    display: flex; /* Используем flexbox для позиционирования элементов */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    justify-content: space-between; /* Равномерно распределяем пространство между элементами */
-}
 
-/* Стили для логотипа */
-.loco {
-    width: 60px; /* Ширина изображения */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    margin-right: 10px; /* Отступ справа от изображения */
-    opacity: 0.7;
-}
-
-/* Стили для названия */
-.header h1 {
-    margin-right: auto; /* Делаем название занимающим всё доступное пространство справа */
-}
-
-/* Стили для списка разделов */
-.header nav ul {
-    margin-right: 100px;
-    display: flex; /* Устанавливаем flexbox для списка разделов */
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы списка */
-}
-
-/* Стили для элементов списка разделов */
-.header nav ul li {
-    margin-left: 20px; /* Добавляем отступ между элементами списка */
-}
-
-/* Стили для ссылок в списке */
-.header nav ul li a {
-    text-decoration: none; /* Убираем подчёркивание */
-    color: #757575; /* Цвет текста серый */
-    font-size: 18px; /* Размер текста */
-    font-weight: normal; /* Нормальный шрифт */
-}
-
-/* При наведении */
-.header nav ul li a:hover {
-    color: #333; /* Темно-серый текст при наведении */
-}
-
-/* При нажатии */
-.header nav ul li a:active {
-    color: #222; /* Чуть темнее при нажатии */
-    font-weight: bold; /* Жирный шрифт при нажатии */
-}
-        
-
-  .start {
-    height: 900px;
-    background-image: url('D:/Sitemain/Img/NightForest.png'); /* Замени 'background.jpg' на путь к своему изображению */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-  }
-  .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  .parallax::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .content {
-    position: relative;
-    z-index: 1;
-  }
-  .start-h1 {
-    font-size: 4.5rem; /* Размер заголовка */
-    margin-bottom: 20px; /* Отступ после заголовка */
-  }
-  .start-p {
-    font-size: 2rem; /* Размер обычного текста */
-    margin-bottom: 20px; /* Отступ после обычного текста */
-  }
-  .btn {
-    width: 150px;
-    height: 50px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 35px;
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .btn:hover {
-    background-color: #45a049;
-  }
-         
-                .body {
-                        background-color: #181818; /* Цвет фона */
-                        margin: 0; /* Убираем отступы у body */
-                    }
-        
-                .main {
-                        margin: 0; /* Устанавливаем отступы слева и справа для main в 0 */
-                    }
-        
-                .fotocbcart {
-                        height: 950px;
-                        display: flex; /* Расположение картинок в ряд */
-                        justify-content: center; /* Центрирование по горизонтали */
-                        align-items: center; /* Выравнивание по вертикали по центру */
-                        flex-wrap: wrap; /* Перенос элементов на новую строку при нехватке места */
-                        padding: 10px 10px 100px 10px;
-                        position: relative; /* Позиционируем контейнер относительно */
-                    }
-
-                .fotocbcart img {
-                        width: 400px; /* Измените размер картинок по вашему усмотрению */
-                        height: auto; /* Автоматическое подстраивание высоты */
-                        margin: 10px; /* Отступ между картинками */
-                        filter: grayscale(100%); /* Преобразование в черно-белое изображение */
-                        transition: filter 0.2s ease; /* Плавное изменение фильтра */
-                        position: relative; /* Позиционируем изображение относительно */
-                    }
-
-                .fotocbcart img:hover {
-                        filter: grayscale(0%); /* Возвращение изображения к цветному при наведении */
-                    }
-
-                .overlay {
-                        position: absolute; /* Устанавливаем абсолютное позиционирование, чтобы текст был поверх изображений */
-                        display: flex; /* Используем flexbox для центрирования текста */
-                        justify-content: center; /* Центрируем текст по горизонтали */
-                        align-items: center; /* Центрируем текст по вертикали */
-                        color: white; /* Цвет текста белый */
-                        font-size: 24px; /* Размер шрифта текста */
-                        text-align: center; /* Выравниваем текст по центру */
-                        pointer-events: none; /* Предотвращаем взаимодействие с текстом */
-                        z-index: 1; /* Помещаем текст поверх изображений */
-                    }
-        
-                .image-container {
-                        position: relative; /* Устанавливаем относительное позиционирование, чтобы блок текста был привязан к изображению */
-                        display: inline-block; /* Делаем контейнер блоком, чтобы его размеры подстраивались под содержимое */
-                    }
-
-                .text-overlay {
-                        position: absolute; /* Устанавливаем абсолютное позиционирование для текстового блока */
-                        bottom: 700px; /* Располагаем текст снизу с отступом 10px */
-                        left: 100px; /* Располагаем текст слева с отступом 10px */
-                        right: 10px; /* Располагаем текст справа с отступом 10px */
-                        color: white; /* Цвет текста белый */
-                        padding: 10px; /* Добавляем отступы внутри текстового блока для улучшения внешнего вида */
-                    }
-        
-                .cards-container {
-                        position: absolute;
-                        top: 2800px; /* Регулируйте положение контейнера по вертикали */
-                        left: 50%; /* Регулируйте положение контейнера по горизонтали */
-                        transform: translate(-50%, -50%);
-                    }
-
-                .card {
-                        position: relative;
-                        display: inline-block;
-                        cursor: pointer;
-                        transition: transform 0.3s ease;
-                        margin-bottom: 20px;
-                    }
-
-                .card:hover {
-                        transform: translateY(-20px) scale(1.2);
-                    }
-
-                .card img {
-                        width: 150px; /* Регулируйте размер карты */
-                        height: auto;
-                        border: none;
-                        transform-origin: bottom center;
-                    }
-
-                .card-info {
-                        position: absolute;
-                        top: -50px; /* Регулируйте положение текста по вертикали */
-                        right: -20px; /* Регулируйте положение текста по горизонтали */
-                        background-color: #fff;
-                        padding: 10px;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        display: none;
-                    }
-
-                .expanded-card .card-info {
-                        display: block;
-                    }
-
-                .expanded-card {
-                        position: absolute;
-                        top: 2080px; /* Регулируйте положение расширенной карты по вертикали */
-                        right: 55%; /* Регулируйте положение расширенной карты по горизонтали */
-                        display: none;
-                    }
-
-                .expanded-text {
-                        position: absolute;
-                        top: 25%;
-                        left: 120%; /* Расположение справа от карты */
-                        margin-left: 20px; /* Отступ слева для создания разделения между картой и текстом */
-                        color: white; /* Белый цвет текста */
-                        font-size: 18px;
-                        width: 200px; /* Ширина текстового блока */
-                    }
-
-                .expanded-card img {
-                        float: left; /* Добавляем картинке свойство float для того, чтобы текст был справа от неё */
-                        margin-right: 20px; /* Отступ между картинкой и текстом */
-                        width: 350px; /* Регулируем размер карты */
-                        height: auto;
-                        border: none;
-                    }
-            
-                .card:nth-child(1) img { transform: rotate(-15deg); }
-                .card:nth-child(2) img { transform: rotate(-7deg); }
-                .card:nth-child(3) img { transform: rotate(0deg); }
-                .card:nth-child(4) img { transform: rotate(7deg); }
-                .card:nth-child(5) img { transform: rotate(15deg); }
-        
-        
-                .galsli {
-                        position: absolute;
-                        top: 3500px; /* Регулируйте положение контейнера по вертикали */
-                        left: 50%; /* Регулируйте положение контейнера по горизонтали */
-                        transform: translate(-50%, -50%);
-                    }
-
-                .gallery {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                    }
-
-                .gallery img {
-                        width: 1400px;
-                        border-radius: 10px;
-                        transition: transform 0.3s ease;
-                        cursor: pointer;
-                    }
-
-                .slider {
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                    }
-
-                .slider .dot {
-                        width: 20px; /* Уменьшаем ширину точки */
-                        height: 15px; /* Уменьшаем высоту точки */
-                        border-radius: 10px; /* Половина высоты, чтобы закруглить углы */
-                        background-color: #aaa;
-                        margin: 0 2px; /* Уменьшаем расстояние между точками */
-                        cursor: pointer;
-                    }
-
-                .slider .active {
-                        background-color: #333;
-                    }
-
-                .hidden {
-                        display: none;
-                    }
-        </style>  
-    
   <script>
         document.addEventListener("DOMContentLoaded", function() {
             var links = document.querySelectorAll('header nav ul li a');
@@ -362,7 +60,7 @@ expandCard(document.querySelector(".card"));
     <body class="body">
         
     <header class="header">
-        <img src="D:\Sitemain\Img\WhiteIconTeam.png" alt="Логотип" class="loco">
+        <img src="Img\WhiteIconTeam.png" alt="Логотип" class="loco">
         <h1 class="tage">Nightfall games</h1>
         <nav>
             <ul>
@@ -373,13 +71,7 @@ expandCard(document.querySelector(".card"));
         </nav>
     </header>
         
-       
-        
-   
-
-        
     <main class="main">
-        
         
         <section class="start">
           <div class="content">
@@ -388,7 +80,6 @@ expandCard(document.querySelector(".card"));
               <p class="start-p">Присоединяйтесь к нам в нашей новой игре, где вас ждут волшебные миры,<br>уникальные стратегии и много приключений.<br> У нас есть уникальные колоды карт и множество персонажей для насыщенной атмосферы.<br>Бросьте вызов могущественным боссам и наслаждайтесь стратегией и азартом. <br>Нажмите кнопку "Скачать" и погрузитесь в мир NightFall Games прямо сейчас!</p>
               <a href="#" class="btn">Скачать</a>
             </div>
-        
         </section>
         
         <script>
@@ -403,28 +94,28 @@ expandCard(document.querySelector(".card"));
         <section class="fotocb" id="fotocb">
        <div class="fotocbcart">
             <div class="image-container">
-                <img src="D:\Sitemain\Img\mask.png" alt="Картинка 1">
+                <img src="Img\mask.png" alt="Картинка 1">
                     <div class="text-overlay">
                         Текст для первой картинки.
                     </div>
             </div>
                     
             <div class="image-container">
-                <img src="D:\Sitemain\Img\Moon.png" alt="Картинка 2">
+                <img src="Img\Moon.png" alt="Картинка 2">
                     <div class="text-overlay">
                         Текст для второй картинки.
                     </div>
             </div>
                     
             <div class="image-container">
-                <img src="D:\Sitemain\Img\Table.png" alt="Картинка 3">
+                <img src="Img\Table.png" alt="Картинка 3">
                     <div class="text-overlay">
                         Текст для третьей картинки.
                     </div>
             </div>
                     
             <div class="image-container">
-                <img src="D:\Sitemain\Img\Forest.png" alt="Картинка 4">
+                <img src="Img\Forest.png" alt="Картинка 4">
                     <div class="text-overlay">
                         Текст для четвертой картинки.
                     </div>
@@ -435,27 +126,27 @@ expandCard(document.querySelector(".card"));
     <div class="cards-container">
 
         <div class="card" onclick="expandCard(this)">
-            <img src="D:\Sitemain\Img\1.png" alt="Карта 1" class="">
+            <img src="Img\1.png" alt="Карта 1" class="">
             <div class="card-info">Шанс выпадения 50%  </div>
         </div>
 
         <div class="card" onclick="expandCard(this)">
-            <img src="D:\Sitemain\Img\2.png" alt="Карта 2" class="">
+            <img src="Img\2.png" alt="Карта 2" class="">
             <div class="card-info">Шанс выпадения 25% </div>
         </div>
 
         <div class="card" onclick="expandCard(this)">
-            <img src="D:\Sitemain\Img\3.png" alt="Карта 3" class="">
+            <img src="Img\3.png" alt="Карта 3" class="">
             <div class="card-info">Шанс выпадения 10% </div>
         </div>
 
         <div class="card" onclick="expandCard(this)">
-            <img src="D:\Sitemain\Img\4.png" alt="Карта 4" class="">
+            <img src="Img\4.png" alt="Карта 4" class="">
             <div class="card-info">Шанс выпадения 5% </div>
         </div>
 
         <div class="card" onclick="expandCard(this)">
-            <img src="D:\Sitemain\Img\5.png" alt="Карта 5" class="">
+            <img src="Img\5.png" alt="Карта 5" class="">
             <div class="card-info">Шанс выпадения 1% </div>
         </div>
 
@@ -471,12 +162,12 @@ expandCard(document.querySelector(".card"));
     
     <div class="gallery">
         
-        <img src="D:\Sitemain\Img\Fire.png" alt="Photo 1" >
-        <img src="D:\Sitemain\Img\HighresScreenshot00077.png" alt="Photo 2" >
-        <img src="D:\Sitemain\Img\HouseNight.png" alt="Photo 3" >
-        <img src="D:\Sitemain\Img\layer-1.jpg" alt="Photo 4" >
-        <img src="D:\Sitemain\Img\Letter.png" alt="Photo 5" >
-        <img src="D:\Sitemain\Img\NightForest.png" alt="Photo 6" >
+        <img src="Img\Fire.png" alt="Photo 1" >
+        <img src="Img\HighresScreenshot00077.png" alt="Photo 2" >
+        <img src="Img\HouseNight.png" alt="Photo 3" >
+        <img src="Img\layer-1.jpg" alt="Photo 4" >
+        <img src="Img\Letter.png" alt="Photo 5" >
+        <img src="Img\NightForest.png" alt="Photo 6" >
         
     </div>
 
