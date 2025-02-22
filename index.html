@@ -4,63 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traviora</title>
-    <link rel="stylesheet" href="CSS\Style.css">
+    <link rel="stylesheet" href="CSS/Style.css">
 </head>
 
-  <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var links = document.querySelectorAll('header nav ul li a');
-
-            for(var i = 0; i < links.length; i++) {
-                links[i].addEventListener('click', function(e) {
-                    e.preventDefault();
-
-                    var targetId = this.getAttribute('href').substring(1);
-                    var targetElement = document.getElementById(targetId);
-                    var yOffset = 5; // Смещение, если у вас есть фиксированный заголовок, чтобы элемент не закрывался под ним
-
-                    if(targetElement) {
-                        var y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-                        window.scrollTo({
-                            top: y,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            }
-        });
-    </script>
-    
-    <script>
-    function expandCard(card) {
-        var expandedCard = document.getElementById("expanded-card");
-        var expandedImage = document.getElementById("expanded-image");
-        var expandedText = document.getElementById("expanded-text");
-        var cardImage = card.querySelector("img");
-        var cardInfo = card.querySelector(".card-info");
-
-        expandedImage.src = cardImage.src;
-        expandedText.textContent = cardInfo.textContent;
-        expandedCard.style.display = "block";
-    }
-
-    // При загрузке страницы вызываем функцию expandCard для первой карты
-    window.onload = function() {
-        var firstCard = document.querySelector(".card");
-        expandCard(firstCard);
-    };
-
-// Вызываем функцию expandCard сразу для первой карты при загрузке страницы
-expandCard(document.querySelector(".card"));
-
-</script>
-    
-    
-    <body class="body">
-        
+<body class="body">
     <header class="header">
-        <img src="Img\WhiteIconTeam.png" alt="Логотип" class="loco">
+        <img src="Img/WhiteIconTeam.png" alt="Логотип" class="loco">
         <h1 class="tage">Nightfall games</h1>
         <nav>
             <ul>
@@ -70,171 +19,104 @@ expandCard(document.querySelector(".card"));
             </ul>
         </nav>
     </header>
-        
+
     <main class="main">
-        
         <section class="start">
-          <div class="content">
-              <h1 class="start-h1">Добро пожаловать в мир NightFall Games:<br>
-                                    Открой новую главу в мире карточных приключений!</h1>
-              <p class="start-p">Присоединяйтесь к нам в нашей новой игре, где вас ждут волшебные миры,<br>уникальные стратегии и много приключений.<br> У нас есть уникальные колоды карт и множество персонажей для насыщенной атмосферы.<br>Бросьте вызов могущественным боссам и наслаждайтесь стратегией и азартом. <br>Нажмите кнопку "Скачать" и погрузитесь в мир NightFall Games прямо сейчас!</p>
-              <a href="#" class="btn">Скачать</a>
+            <div class="content">
+                <h1 class="start-h1">Добро пожаловать в мир NightFall Games:<br>
+                    Открой новую главу в мире карточных приключений!</h1>
+                <p class="start-p">Присоединяйтесь к нам в нашей новой игре, где вас ждут волшебные миры,<br>
+                    уникальные стратегии и много приключений.<br>
+                    У нас есть уникальные колоды карт и множество персонажей для насыщенной атмосферы.<br>
+                    Бросьте вызов могущественным боссам и наслаждайтесь стратегией и азартом. <br>
+                    Нажмите кнопку "Скачать" и погрузитесь в мир NightFall Games прямо сейчас!</p>
+                <a href="#" class="btn">Скачать</a>
             </div>
         </section>
-        
-        <script>
-  // JavaScript для эффекта параллакса
-  window.addEventListener('scroll', function() {
-    const parallax = document.querySelector('.parallax');
-    let scrollPosition = window.pageYOffset;
-    parallax.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
-  });
-</script>
-        
+
         <section class="fotocb" id="fotocb">
-       <div class="fotocbcart">
-            <div class="image-container">
-                <img src="Img\mask.png" alt="Картинка 1">
-                    <div class="text-overlay">
-                        Текст для первой картинки.
-                    </div>
+            <div class="fotocbcart">
+                <div class="image-container">
+                    <img src="Img/mask.png" alt="Картинка 1">
+                    <div class="text-overlay">Текст для первой картинки.</div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Img/Moon.png" alt="Картинка 2">
+                    <div class="text-overlay">Текст для второй картинки.</div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Img/Table.png" alt="Картинка 3">
+                    <div class="text-overlay">Текст для третьей картинки.</div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="Img/Forest.png" alt="Картинка 4">
+                    <div class="text-overlay">Текст для четвертой картинки.</div>
+                </div>
             </div>
-                    
-            <div class="image-container">
-                <img src="Img\Moon.png" alt="Картинка 2">
-                    <div class="text-overlay">
-                        Текст для второй картинки.
-                    </div>
+        </section>
+
+        <section class="cards" id="cards">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="Img/1.png" alt="Карта 1">
+                    <div class="card-info">Шанс выпадения 50%</div>
+                </div>
+
+                <div class="card">
+                    <img src="Img/2.png" alt="Карта 2">
+                    <div class="card-info">Шанс выпадения 25%</div>
+                </div>
+
+                <div class="card">
+                    <img src="Img/3.png" alt="Карта 3">
+                    <div class="card-info">Шанс выпадения 10%</div>
+                </div>
+
+                <div class="card">
+                    <img src="Img/4.png" alt="Карта 4">
+                    <div class="card-info">Шанс выпадения 5%</div>
+                </div>
+
+                <div class="card">
+                    <img src="Img/5.png" alt="Карта 5">
+                    <div class="card-info">Шанс выпадения 1%</div>
+                </div>
             </div>
-                    
-            <div class="image-container">
-                <img src="Img\Table.png" alt="Картинка 3">
-                    <div class="text-overlay">
-                        Текст для третьей картинки.
-                    </div>
+
+            <div id="expanded-card" class="expanded-card">
+                <img src="" alt="Расширенная карта" id="expanded-image">
+                <div id="expanded-text" class="expanded-text"></div>
             </div>
-                    
-            <div class="image-container">
-                <img src="Img\Forest.png" alt="Картинка 4">
-                    <div class="text-overlay">
-                        Текст для четвертой картинки.
-                    </div>
-            </div>
-        </div>   
-         </section>
-<section class="cards" id="cards">
-    <div class="cards-container">
+        </section>
 
-        <div class="card" onclick="expandCard(this)">
-            <img src="Img\1.png" alt="Карта 1" class="">
-            <div class="card-info">Шанс выпадения 50%  </div>
-        </div>
-
-        <div class="card" onclick="expandCard(this)">
-            <img src="Img\2.png" alt="Карта 2" class="">
-            <div class="card-info">Шанс выпадения 25% </div>
-        </div>
-
-        <div class="card" onclick="expandCard(this)">
-            <img src="Img\3.png" alt="Карта 3" class="">
-            <div class="card-info">Шанс выпадения 10% </div>
-        </div>
-
-        <div class="card" onclick="expandCard(this)">
-            <img src="Img\4.png" alt="Карта 4" class="">
-            <div class="card-info">Шанс выпадения 5% </div>
-        </div>
-
-        <div class="card" onclick="expandCard(this)">
-            <img src="Img\5.png" alt="Карта 5" class="">
-            <div class="card-info">Шанс выпадения 1% </div>
-        </div>
-
-    </div>
-
-    <div id="expanded-card" class="expanded-card">
-        <img src="" alt="Расширенная карта" id="expanded-image">
-        <div id="expanded-text" class="expanded-text"></div>
-    </div>
-</section>
-    
         <section class="galsli" id="galsli">
-    
-    <div class="gallery">
-        
-        <img src="Img\Fire.png" alt="Photo 1" >
-        <img src="Img\HighresScreenshot00077.png" alt="Photo 2" >
-        <img src="Img\HouseNight.png" alt="Photo 3" >
-        <img src="Img\layer-1.jpg" alt="Photo 4" >
-        <img src="Img\Letter.png" alt="Photo 5" >
-        <img src="Img\NightForest.png" alt="Photo 6" >
-        
-    </div>
+            <div class="gallery">
+                <img src="Img/Fire.png" alt="Photo 1">
+                <img src="Img/HighresScreenshot00077.png" alt="Photo 2">
+                <img src="Img/HouseNight.png" alt="Photo 3">
+                <img src="Img/layer-1.jpg" alt="Photo 4">
+                <img src="Img/Letter.png" alt="Photo 5">
+                <img src="Img/NightForest.png" alt="Photo 6">
+            </div>
 
-    <div class="slider">
-        
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        
-    </div>
-    
-    </section>
-    
-        <script>
-        const images = document.querySelectorAll('.gallery img');
-        const dots = document.querySelectorAll('.slider .dot');
+            <div class="slider">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+    </main>
 
-        let currentIndex = 0;
+    <footer></footer>
 
-        function showImage(index) {
-            images.forEach((img, i) => {
-                if (i === index) {
-                    img.classList.remove('hidden');
-                } else {
-                    img.classList.add('hidden');
-                }
-            });
-        }
-
-        function activateDot(index) {
-            dots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-            activateDot(currentIndex);
-        }
-
-        setInterval(nextImage, 7000);
-
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', () => {
-            currentIndex = i;
-            showImage(currentIndex);
-            activateDot(currentIndex);
-                });
-            });
-
-        showImage(currentIndex);
-        activateDot(currentIndex);
-        
-</script>
-        
-    </main> 
-        
-<footer></footer>
-        
-    </body>
-    
+    <!-- Подключение внешних скриптов -->
+    <script src="js/scripts.js"></script>
+    <script src="js/slider.js"></script>
+</body>
 </html>
